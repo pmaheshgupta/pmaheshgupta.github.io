@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahesh Gupta · AI-Native Engineering in Fintech</title>
+<meta name="description" content="Mahesh Gupta is an engineering leader in Hyderabad who writes about building AI-native engineering teams in fintech, where speed and accountability have to grow together.">
+<meta name="author" content="Mahesh Gupta">
+<link rel="canonical" href="https://pmaheshgupta.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mahesh Gupta · AI-Native Engineering in Fintech">
+<meta property="og:description" content="Playbooks and tools for engineering leaders building AI-native teams in fintech.">
+<meta property="og:url" content="https://pmaheshgupta.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mahesh Gupta","url":"https://pmaheshgupta.github.io/","jobTitle":"Engineering leader","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/mahesh-gupta-80359a14a","https://github.com/pmaheshgupta"]}</script>
+<style>
+/* Layout: a single narrow column, like a well-kept notebook index. The one bold move is the oversized name. */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --ink:#0F1B2D; --muted:#5A6678; --rule:#D3DAE4;
+  --accent:#1F4FD8; --accent-soft:#E2E9FC; --on-accent:#FFFFFF;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C121B; --surface:#141C28; --ink:#E5EBF3; --muted:#94A1B4; --rule:#273345;
+  --accent:#86A3FF; --accent-soft:#1B2748; --on-accent:#0C121B; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C121B; --surface:#141C28; --ink:#E5EBF3; --muted:#94A1B4; --rule:#273345;
+  --accent:#86A3FF; --accent-soft:#1B2748; --on-accent:#0C121B; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px}
+header{padding-block:88px 40px}
+.eyebrow{font-family:var(--f-mono);font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.75rem,9vw,4.75rem);margin-block:10px 18px}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:60ch;margin:0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;padding:9px 15px;border-radius:8px;border:1px solid var(--accent);font-weight:600;text-decoration:none;font-size:.9375rem;font-family:var(--f-body);cursor:pointer;background:transparent;color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+section{padding-block:40px;border-top:1px solid var(--rule)}
+section > h2{font-size:1.5rem;margin-bottom:18px}
+.work{display:grid;gap:14px}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px;border:1px solid var(--rule);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .15s}
+.item:hover{border-color:var(--accent)}
+.item .k{grid-column:1/-1;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.item h3{font-size:1.375rem}
+.item p{grid-column:1;margin:0;color:var(--muted);font-size:.9375rem}
+.item .arrow{grid-row:2/4;grid-column:2;align-self:center;font-size:1.5rem;color:var(--accent)}
+.item .tags{grid-column:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.item .tags span{font-family:var(--f-mono);font-size:.75rem;padding:3px 8px;border-radius:5px;background:var(--accent-soft);color:var(--ink)}
+.soon{padding:16px 20px;border:1px dashed var(--rule);border-radius:12px;color:var(--muted);font-size:.9375rem}
+.prose{display:grid;gap:14px;max-width:65ch}
+.prose p{margin:0}
+.beliefs{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.beliefs li{display:grid;grid-template-columns:minmax(0,15rem) 1fr;gap:4px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.beliefs li:first-child{border-top:1px solid var(--rule)}
+.beliefs b{font-family:var(--f-display);font-size:1.0625rem}
+.beliefs span{color:var(--muted);font-size:.9375rem}
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.contact code{font-family:var(--f-mono);font-size:.875rem;padding:8px 11px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);user-select:all}
+footer{padding-block:28px 56px;border-top:1px solid var(--rule);color:var(--muted);font-size:.8125rem}
+@media (max-width:560px){header{padding-block:56px 28px}.beliefs li{grid-template-columns:1fr}.item{grid-template-columns:1fr}.item .arrow{display:none}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="eyebrow">Hyderabad · AI-native engineering · Fintech</div>
+  <h1>Mahesh Gupta</h1>
+  <p class="lede">I build software for finance and think a lot about how engineering teams can let AI do more of the work without losing track of who is accountable. Here I publish what I've worked out, as playbooks and tools you can use.</p>
+  <div class="links">
+    <a class="btn primary" href="/ai-native-engineering-playbook/">Read the AI-Native Playbook</a>
+    <a class="btn" href="https://www.linkedin.com/in/mahesh-gupta-80359a14a" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/pmaheshgupta" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">Work</h2>
+    <div class="work">
+      <a class="item" href="/ai-native-engineering-playbook/">
+        <span class="k">Playbook · interactive</span>
+        <h3>AI-Native Engineering Playbook</h3>
+        <p>How engineering leaders move from AI-assisted to AI-native delivery: the maturity ladder, the evidence, a 62-question assessment and a level-by-level execution guide, with fintech guardrails throughout.</p>
+        <div class="tags"><span>Maturity model</span><span>Self-assessment</span><span>Fintech guardrails</span></div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="/ai-native-engineering-playbook/assessment.html">
+        <span class="k">Tool</span>
+        <h3>AI-Native SDLC Maturity Assessment</h3>
+        <p>62 questions across 12 SDLC stages. Find your level, your guardrail readiness and the target that pays back for your team size.</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="soon">More on the way.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="about-h" id="about">
+    <h2 id="about-h">About</h2>
+    <div class="prose">
+      <p>I build software for finance, where a bug can mean lost money and any decision might one day have to be explained to a regulator. That shapes how I think about AI. I'm genuinely excited by how much of the work it can take on, and I always want to know who is accountable when it does.</p>
+      <p>The problem I keep coming back to is rules locked inside documents: pricing rules, fund agreements, regulations. People write them in prose, and someone has to turn them into something a system can execute and prove is right. I first chased it with a hand-built compiler. Now I chase it with agents. The tools changed; the question didn't.</p>
+    </div>
+    <h3 style="font-size:1.125rem;margin:28px 0 10px">What I believe</h3>
+    <ul class="beliefs">
+      <li><b>Humans move up, not out.</b><span>AI-first means people spend their time on judgment, specification and verification.</span></li>
+      <li><b>Measure, don't feel.</b><span>Developers can feel 20% faster while being 19% slower. Cycle time and failure rates settle it.</span></li>
+      <li><b>Brakes before engine.</b><span>Rollback, enforced gates and named owners come before more autonomy.</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="talk-h">
+    <h2 id="talk-h">Let's talk</h2>
+    <p style="margin:0 0 14px;color:var(--muted)">If your team is working out its own climb to AI-native, I'm always happy to compare notes.</p>
+    <div class="contact"><code id="email">pmaheshgupta530@gmail.com</code><button class="btn" type="button" id="copyEmail">Copy email</button></div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Mahesh Gupta</div></footer>
+<script>
+document.getElementById('copyEmail').addEventListener('click',function(e){
+  var b=e.currentTarget, t=document.getElementById('email').textContent;
+  function done(){ b.textContent='Copied'; setTimeout(function(){ b.textContent='Copy email'; },1600); }
+  function fallback(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('email')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Selected. Press Ctrl+C'; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done,fallback); } else fallback();
+});
+</script>
+</body>
+</html>
